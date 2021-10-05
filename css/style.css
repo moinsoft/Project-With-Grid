@@ -19,6 +19,7 @@ Variables
 
   --orangeColorDeep: #df9c20;
   --btnColor: #c98d1d;
+  --borderColor: #dddddd;
 
 
   /* Font Sizes */
@@ -195,7 +196,7 @@ About Section
 .about {
   display: grid;
   grid-template-columns: repeat(3,auto);
-  column-gap: 20px;
+  column-gap: 30px;
 }
 
 .single-about {
@@ -248,7 +249,7 @@ Services Section
 .service {
   display: grid;
   grid-template: repeat(2,1fr) / repeat(3,1fr);
-  gap: 20px;
+  gap: 30px;
 }
 
 
@@ -321,4 +322,41 @@ CTA Section
 .cta-area p {
   max-width: 800px;
   margin: 30px auto;
+}
+
+
+/*====================
+Gallery Section
+======================*/
+
+.gallery {
+  display: grid;
+  grid-template: repeat(3,1fr) / repeat(4,1fr);
+  gap: 30px;
+}
+
+.single-gallery {
+  border: 1px solid var(--orangeColorDeep);
+  padding: 3px;
+  border-radius: 8px;
+}
+
+.single-gallery:hover{
+  border: 1px solid var(--primaryColor);
+}
+
+.gallery-img {
+  height: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+.gallery-img img {
+  height: 100%;
+  transition: all 0.3s linear;
+}
+
+.gallery-img img:hover {
+  transform: scale(1.1);
 }
