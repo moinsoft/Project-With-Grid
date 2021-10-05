@@ -123,3 +123,13 @@ Header Section
   width: 100%;
   visibility: visible;
 }
+
+/*====================
+Banner Section
+======================*/
+
+.banner-area img {
+  border: 3px solid var(--primaryColor);
+  padding: 3px;
+  border-radius: 3px;
+}
