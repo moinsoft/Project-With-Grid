@@ -14,13 +14,11 @@ Variables
   --primaryColor: #ffffff;
 
   --bgDeep: #13124C;
-  --bgDeepDown: #ebeafa;
   --bgLight: #292768;
+  --bgSkyLight: #99ccff;
 
-  --borderColor: #E2A936;
-
-  --orangeColorDeep: #E3A83C;
-  --orangeColorLight: #E5A737;
+  --orangeColorDeep: #df9c20;
+  --btnColor: #c98d1d;
 
 
   /* Font Sizes */
@@ -103,6 +101,25 @@ Common Section Title
 .section-title p {
   max-width: 700px;
   margin: 0 auto;
+}
+
+
+/*====================
+Common Button CSS
+======================*/
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(to right, var(--btnColor) 0%, var(--orangeColorDeep) 51%, var(--btnColor) 100%);
+  background-size: 200% auto;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s linear;
+}
+
+.btn:hover {
+  background-position: right center;
 }
 
 
@@ -213,4 +230,60 @@ About Section
   text-transform: capitalize;
   margin: 10px 0;
   font-size: var(--fontSecondary);
+}
+
+
+/*====================
+Services Section
+======================*/
+
+.services-area {
+  background-color: var(--bgSkyLight);
+}
+
+.services-area .section-title h4{
+  color: var(--bgLight)
+}
+
+.service {
+  display: grid;
+  grid-template: repeat(2,1fr) / repeat(3,1fr);
+  gap: 20px;
+}
+
+
+.single-service {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--bgLight);
+  text-align: center;
+}
+
+.single-service h4 {
+  margin-bottom: 20px;
+  font-size: var(--fontSecondary);
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.service-img {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.service-img img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s linear;
+}
+
+.single-service:hover .service-img img {
+  transform: scale(1.1);
+}
+
+.single-service p {
+  margin: 20px 0;
+  text-align: justify;
 }
