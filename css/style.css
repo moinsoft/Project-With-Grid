@@ -454,3 +454,32 @@ Contact Section
   color: var(--orangeColorDeep);
   border-bottom: 3px dashed var(--orangeColorDeep);
 }
+
+
+/*====================
+Footer Section
+======================*/
+.footer-area {
+  padding: 30px 0;
+  text-align: center;
+  background: linear-gradient(to right, var(--btnColor) 0%, var(--orangeColorDeep) 51%, var(--btnColor) 100%);
+  background-size: 200% auto;
+  transition: all 0.3s linear;
+}
+
+.footer-area:hover {
+  background-position: right center;
+}
+
+.footer-area p a {
+  font-weight: bold;
+  border-top: 3px double var(--bgLight);
+  border-bottom: 3px double var(--bgLight);
+  transition: all 0.3s linear;
+}
+
+.footer-area p a:hover {
+  border-top: 3px dotted var(--bgLight);
+  border-bottom: 3px dotted var(--bgLight);
+  color: var(--bgLight);
+}
