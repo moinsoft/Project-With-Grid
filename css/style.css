@@ -18,8 +18,7 @@ Variables
   --bgSkyLight: #99ccff;
 
   --orangeColorDeep: #df9c20;
-  --btnColor: #c98d1d;
-  --borderColor: #dddddd;
+  --btnColor: #e9ba63;
 
 
   /* Font Sizes */
@@ -135,7 +134,7 @@ Header Section
   display: grid;
   grid-template-columns: 1fr 3fr;
   align-items: center;
-  padding:20px 0;
+  padding: 20px 0;
 }
 
 .header__logo a {
@@ -147,7 +146,7 @@ Header Section
 
 .header__nav ul {
   display: grid;
-  grid-template-columns: repeat(5,auto);
+  grid-template-columns: repeat(5, auto);
   justify-content: end;
 }
 
@@ -164,7 +163,7 @@ Header Section
 .header__nav ul li a::before {
   content: "";
   position: absolute;
-  background-color: var(--orangeColorDeep);
+  background-color: var(--primaryColor);
   width: 0;
   height: 2px;
   left: 0;
@@ -176,6 +175,11 @@ Header Section
 .header__nav ul li a:hover::before {
   width: 100%;
   visibility: visible;
+  color: var(--primaryColor);
+}
+
+.header__nav ul li a:hover {
+  color: var(--primaryColor);
 }
 
 /*====================
@@ -195,7 +199,7 @@ About Section
 
 .about {
   display: grid;
-  grid-template-columns: repeat(3,auto);
+  grid-template-columns: repeat(3, auto);
   column-gap: 30px;
 }
 
@@ -238,17 +242,9 @@ About Section
 Services Section
 ======================*/
 
-.services-area {
-  background-color: var(--bgSkyLight);
-}
-
-.services-area .section-title h4{
-  color: var(--bgLight)
-}
-
 .service {
   display: grid;
-  grid-template: repeat(2,1fr) / repeat(3,1fr);
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
   gap: 30px;
 }
 
@@ -256,8 +252,14 @@ Services Section
 .single-service {
   padding: 20px;
   border-radius: 5px;
-  background-color: var(--bgLight);
+  background-color: var(--bgDeep);
   text-align: center;
+  border: 1px solid var(--bgDeep);
+  transition: all 0.3s linear;
+}
+
+.single-service:hover {
+  border: 1px solid var(--orangeColorDeep);
 }
 
 .single-service h4 {
@@ -302,14 +304,14 @@ CTA Section
   z-index: 2;
 }
 
-.cta-area::before{
+.cta-area::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  background-color:var(--bgDeep);
+  background-color: var(--bgDeep);
   opacity: 0.4;
   z-index: -1;
 }
@@ -319,6 +321,7 @@ CTA Section
   font-size: 40px;
   text-transform: uppercase;
 }
+
 .cta-area p {
   max-width: 800px;
   margin: 30px auto;
@@ -331,7 +334,7 @@ Gallery Section
 
 .gallery {
   display: grid;
-  grid-template: repeat(3,1fr) / repeat(4,1fr);
+  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
   gap: 30px;
 }
 
@@ -341,7 +344,7 @@ Gallery Section
   border-radius: 8px;
 }
 
-.single-gallery:hover{
+.single-gallery:hover {
   border: 1px solid var(--primaryColor);
 }
 
@@ -359,4 +362,95 @@ Gallery Section
 
 .gallery-img img:hover {
   transform: scale(1.1);
+}
+
+
+
+
+/*====================
+Contact Section
+======================*/
+
+.contact-area {
+  background-color: var(--bgColorSecondary);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 30px;
+  align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: var(--fontPrimary);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 0 0.15rem rgba(223, 156, 32, 0.8);
+}
+
+.contact-form textarea {
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.form-btn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+}
+
+.form-btn input {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.contact-address {
+  display: grid;
+  row-gap: 30px;
+}
+
+.single-address {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+}
+
+.address-icon i {
+  background-color: var(--orangeColorDeep);
+  color: var(--bgLight);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+.address-content {
+  transition: all 0.3s linear;
+}
+
+.address-content h4 {
+  text-transform: capitalize;
+}
+
+.single-address:hover .address-content {
+  color: var(--orangeColorDeep);
+}
+
+.address-content p a {
+  border-bottom: 3px dashed transparent;
+}
+
+.single-address:hover .address-content p a {
+  color: var(--orangeColorDeep);
+  border-bottom: 3px dashed var(--orangeColorDeep);
 }
