@@ -39,7 +39,52 @@
 }
 
 /* Small devices (landscape phones, less than 768px) */
-@media (max-width: 48em) {}
+@media (max-width: 48em) {
+
+  .header {
+    grid-template-columns: auto;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header__logo {
+    margin-bottom: 20px;
+  }
+
+  .header__nav ul li a {
+    margin-left: 0;
+    margin: 0 10px;
+  }
+
+  .about {
+    grid-template-columns: 60%;
+    row-gap: 30px;
+    justify-content: center;
+  }
+
+  .service {
+    grid-template: none/60%;
+    justify-content: center;
+  }
+
+  .gallery {
+    grid-template: none/60%;
+    justify-content: center;
+  }
+
+  .gallery-img {
+    height: 200px;
+  }
+
+  .gallery-img img {
+    width: 100%;
+  }
+
+  .contact {
+    grid-template-columns: auto;
+    row-gap: 100px;
+  }
+}
 
 
 /* Extra small devices (portrait phones, less than 576px) */
