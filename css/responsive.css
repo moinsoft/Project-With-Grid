@@ -88,7 +88,72 @@
 
 
 /* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 36em) {}
+@media (max-width: 36em) {
+
+  .container {
+    padding: 10px;
+  }
+
+  .banner-area img {
+    padding: 1px;
+  }
+
+  .header__nav ul {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+
+  .header__nav ul li a {
+    margin: 0 0 5px 0;
+    display: inline-block;
+  }
+
+  .section-title h4 {
+    font-size: 20px;
+  }
+
+  .about {
+    grid-template-columns: 90%;
+  }
+
+  .service {
+    grid-template: none/90%;
+  }
+
+  .cta-area {
+    background-position: center;
+  }
+
+  .cta-area h2 {
+    font-size: 30px;
+  }
+
+  .gallery {
+    grid-template: none/90%;
+  }
+
+  .footer-area {
+    padding: 30px;
+  }
+
+}
+
+/* Wide Mobile Layout */
+@media only screen and (min-width:30em) and (max-width:36em){
+
+  .about {
+    grid-template-columns: 60%;
+  }
+
+  .service {
+    grid-template: none/60%;
+  }
+
+  .gallery {
+    grid-template: none/60%;
+  }
+
+}
 
 
 
